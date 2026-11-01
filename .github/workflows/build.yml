@@ -29,6 +29,8 @@ jobs:
           pip install --upgrade buildozer
 
       - name: Build with Buildozer
+        env:
+          BUILDOZER_ACCEPT_LICENSES: 1
         run: buildozer -v android debug
 
       - name: Upload APK
