@@ -29,8 +29,7 @@ jobs:
           pip install --upgrade buildozer
 
       - name: Build with Buildozer
-        run: |
-          yes y | buildozer -v android debug
+        run: buildozer -v android debug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
